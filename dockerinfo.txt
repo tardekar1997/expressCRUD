@@ -1,0 +1,8 @@
+docker is containarization technology in which we can add code files 
+as well as their dependencies in a single container. main benifit is 
+we can deploy multiple features of single app independently and 
+can develop them in different languages and dependencies. scaling of 
+specific feature is possible instead of whol app. micoservices architecture 
+can be achieved via containarization where small services combines to give 
+one big or complex service. we can upload these containers on cloud like aws or azure 
+and manage orchestrations if number of containers increase in number
