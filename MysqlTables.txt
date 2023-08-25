@@ -1,0 +1,21 @@
+CREATE TABLE Names (
+    Namesid INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE phones (
+    phonId INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    namesId INT,
+    phonNo VARCHAR(255) NOT NULL,
+    FOREIGN KEY (namesId) REFERENCES Names(Namesid),
+    UNIQUE (phonNo)
+);
+CREATE TABLE NameImages (
+    ImageId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    namesId INT,
+    imageData MEDIUMBLOB,
+    FOREIGN KEY (namesId) REFERENCES Names(Namesid)
+);
+ALTER TABLE NameImages
+MODIFY namesId INT NOT NULL;
+
